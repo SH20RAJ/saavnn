@@ -15,6 +15,12 @@ body {
     background: black;
     transition: all 0.4s linear;
     height: 100svh;
+    background: black;
+    background: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    object-fit: cover;
 }
 /* 
 .wrapper {
@@ -69,6 +75,7 @@ body {
     /* border: 2px solid red; */
     overflow: hidden;
 
+
 }
 
 .video-container video {
@@ -90,6 +97,7 @@ body {
     margin-left: 10px;
     margin-bottom: 10px;
     overflow: hidden;
+    bottom: 150px;
 }
 .cations .author {
     position: sticky;
@@ -189,8 +197,30 @@ body {
 
 
 
+video {
+    background-repeat: no-repeat;
+    background-size: cover ;
+    backdrop-filter:  blur(40px);
+}
 
+video {
+  /* Other video styles */
+}
 
+video::-webkit-media-controls-poster {
+  /* For Chrome/Safari */
+  border-radius: 20px; /* Adjust the value as needed */
+}
+
+video::-moz-poster-image {
+  /* For Firefox */
+  border-radius: 20px; /* Adjust the value as needed */
+}
+
+video::poster {
+  /* For general usage */
+  border-radius: 20px; /* Adjust the value as needed */
+}
 
 
 @media (max-width:600px) {

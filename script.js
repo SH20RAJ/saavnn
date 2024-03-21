@@ -111,6 +111,9 @@ let init = () => {
       if (isFullyVisible) {
         // Video is fully in view
         video.classList.add("active");
+        document.body.style.background = "url("+video.poster+")";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
         video.play();
         setUrlParameter("id",video.getAttribute("id"));
         
