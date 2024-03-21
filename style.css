@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* width: 100%; */
+    color: whitesmoke;
+    font-family: Poppins;
+    background: black;
+    transition: all 0.4s linear;
+    height: 100svh;
+}
+/* 
+.wrapper {
+    background: black;
+    /* display: flex; */
+    /* position: absolute; */
+    /* width: 450px; */
+    /* height: 100%; */
+    /* transform: translateY(-100%); */
+    /* overflow: hidden; */
+    /* transition: all .4s linear; */
+/* }  */
+
+
+.center {
+    display: flex;
+    flex-direction: column; /* Stack videos vertically */
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll; /* Allow vertical scrolling */
+    scroll-snap-type: y mandatory; /* Snap to each video */
+    align-items: center;
+}
+
+.wrapper {
+    flex: 0 0 100vh; /* Take full height of viewport */
+    width: 500px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+
+
+.wrapper_header {
+    position: absolute;
+    top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.wrapper_header a{
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    background: black;
+    /* border: 2px solid red; */
+    overflow: hidden;
+
+}
+
+.video-container video {
+    max-width: 100%;
+    height: 100vh;
+    /* display: none; */
+}
+
+.cations {
+    position: absolute;
+    /* border: 2px solid tomato; */
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.cations .author {
+    position: sticky;
+    top: 0;
+}
+.captiontext {
+    margin-top: 10px;
+    height: 100px;
+    /* border: 2px solid; */
+    /* overflow: hidden; */
+    transition: all 0.4s linear;
+    overflow: auto;
+}
+.tools {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+    bottom: 0;
+    right: 0;
+    height: 40%;
+    width: 15%;
+    margin-bottom: 2px;
+    gap: 40px;
+    /* color: red; */
+}
+.tools  i {
+    font-size: 30px;
+    /* color: red; */
+    cursor: pointer;
+    text-shadow: 2px 2px  black;
+}
+
+.tools i:hover {
+    color: hotpink;
+    scale: 1.08;
+    transition: all 0.4s linear;
+}
+
+
+
+
+
+
+
+.playbtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    opacity: 0;
+    transition: all 0.4s linear;
+
+}
+
+
+.author {
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* gap: 10px; */
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.author span {
+    color:  #fff;
+    text-shadow: 2px  2px 8px rgba(0, 0, 0, 0.379);
+}
+
+
+
+
+
+.comments {
+    border: 2px solid;
+    display: none;
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    position: absolute;
+    line-height: 1.6rem;
+    color: rgb(107, 107, 107);
+    backdrop-filter: blur(15px) ;
+    bottom: 0;
+
+}
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.video-container {
+    position: relative;
+    border-radius: 10px;
+    height: 659px;
+    width: 330px;
+    box-shadow: 0 0 50px #000;
+    margin: auto;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+  }
+  
+  .video-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 533px;
+  }
+  
+  .post {
+    width: 330px;
+    height: 533px;
+  } */
