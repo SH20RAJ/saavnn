@@ -94,7 +94,7 @@ let integrate2 = async (n) => {
 };
 
 let createcard2 = (video)=>
-html = `<div id="vid" class="wrapper" >
+html = `<div id="vid" class="wrapper"  style="background: url(${video.image[2].url});" data-bg="${video.image[2].url}">
 <div class="wrapper_header">
    <a href="">following</a> | <a href="">feeds</a>
 </div>
@@ -103,13 +103,13 @@ html = `<div id="vid" class="wrapper" >
        <i class=" fa fa-play"></i>
    </div>
 
-   <div class="video-player" style="background: url(${video.image[2].url});" data-bg="${video.image[2].url}">
-       <video controls preload="none" poster="${video.image[2].url}" src="${video.downloadUrl[4].url}" playsinline id="${video.id}" width="100%" loading="lazy" loop></video>
+   <div class="video-player">
+       <video controls preload="none" data-poster="${video.image[2].url}" poster="${video.image[2].url}" src="${video.downloadUrl[4].url}" playsinline id="${video.id}" width="100%" loading="lazy" loop></video>
    </div>
 </div>
 <div class="cations">
-   <div class="author"><img src="logo.png" alt=""> <span>@</span>GliiJoy </div>
-   <div class="captiontext">${video.name +" - "+ video.label}</div>
+   <div class="author"><img src="logo.png" alt=""> <span>@</span>${video.label} </div>
+   <div class="captiontext">${video.name }</div>
 </div>
 <div class="tools">
    <i class="fa fa-heart-o"></i>
